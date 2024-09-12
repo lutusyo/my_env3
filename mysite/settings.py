@@ -23,9 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2y9=f@ztl-tzaz%ht%vkp$a#m==_)p3^qsin2lpvr=!gl8i8)&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'polepole.pythonanywhere.com',
+    'www.polepole.pythonanywhere.com',]
 
 
 SITE_ID = 1
@@ -48,7 +50,7 @@ INSTALLED_APPS = [
 
     # 3-rd party
     'taggit',
-    #'django.contrib.postgres', 
+    #'django.contrib.postgres',
 
 ]
 
@@ -131,6 +133,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
