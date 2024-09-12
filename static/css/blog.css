@@ -1,7 +1,14 @@
 body {
-    margin:1;
-    padding:1;
+    margin:10;
+    padding:20;
     font-family:helvetica, sans-serif
+}
+
+@media (max-width:599px) {
+    body{
+        font-size: 14px;
+        padding:10px;
+    }
 }
 
 a {
